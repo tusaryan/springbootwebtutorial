@@ -1,6 +1,7 @@
 package com.tusaryan.springbootwebtutorial.springbootwebtutorial.controllers;
 
 import com.tusaryan.springbootwebtutorial.springbootwebtutorial.dto.EmployeeDTO;
+import com.tusaryan.springbootwebtutorial.springbootwebtutorial.exceptions.ResourceNotFoundException;
 import com.tusaryan.springbootwebtutorial.springbootwebtutorial.services.EmployeeService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
@@ -38,7 +39,7 @@ public class EmployeeController {
 //        return ResponseEntity.ok(employeeDTO);
         return employeeDTO
                 .map(employeeDTO1 -> ResponseEntity.ok(employeeDTO1))
-                .orElseThrow(() -> new NoSuchElementException("Employee not found"));
+                .orElseThrow(() -> new ResourceNotFoundException("Employee not found with id : " + id));
     }
 
     @GetMapping(path = "")
