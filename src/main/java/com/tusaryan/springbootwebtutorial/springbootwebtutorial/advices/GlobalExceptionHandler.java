@@ -20,7 +20,7 @@ public class GlobalExceptionHandler {
     public GlobalExceptionHandler(View error) {
         this.error = error;
     }
-//    All the External methods above
+    //    All the External methods above
     @ExceptionHandler(NoSuchElementException.class)
     public ResponseEntity<ApiResponse<?>> handleResourceNotFound(ResourceNotFoundException exception) {
         ApiError apiError = ApiError.builder()
@@ -56,7 +56,7 @@ public class GlobalExceptionHandler {
         return buildErrorResponseEntity(apiError);
     }
 
-//    All the Internal methods below and external above
+    //    All the Internal methods below and external above
     private ResponseEntity<ApiResponse<?>> buildErrorResponseEntity(ApiError apiError) {
         return new ResponseEntity<>(new ApiResponse<>(apiError), apiError.getStatus());
     }
