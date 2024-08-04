@@ -6,5 +6,8 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface EmployeeRepository extends JpaRepository<EmployeeEntity, Long> {
+<<<<<<< HEAD
 
+=======
+>>>>>>> a5ce28f (Files added)
 }

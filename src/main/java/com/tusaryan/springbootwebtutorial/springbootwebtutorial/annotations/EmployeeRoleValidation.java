@@ -11,7 +11,11 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.FIELD, ElementType.PARAMETER})
 @Constraint(validatedBy = {EmployeeRoleValidator.class})
+<<<<<<< HEAD
 public @interface  EmployeeRoleValidation {
+=======
+public @interface EmployeeRoleValidation {
+>>>>>>> a5ce28f (Files added)
 
     String message() default "Role of Employee can either be USER or ADMIN";
 

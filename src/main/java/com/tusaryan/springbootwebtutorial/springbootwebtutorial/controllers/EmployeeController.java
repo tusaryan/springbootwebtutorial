@@ -44,7 +44,11 @@ public class EmployeeController {
 
     @GetMapping(path = "")
     public ResponseEntity<List<EmployeeDTO>> getAllEmployees(@RequestParam(required = false, name = "inputAge") Integer age,
+<<<<<<< HEAD
                                 @RequestParam(required = false) String sortBy){
+=======
+                                                             @RequestParam(required = false) String sortBy){
+>>>>>>> a5ce28f (Files added)
         return ResponseEntity.ok(employeeService.getAllEmployees());
     }
 
